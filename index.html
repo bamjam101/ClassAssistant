@@ -1,33 +1,98 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>assignments</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>ClassAssistant</title>
 </head>
+
 <body>
 
-<h1>Welcome to Assignment Master</h1>
- <form action="http://localhost:5000/assignment" method="POST" enctype="multipart/form-data">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="name" name="name"><br>
-  <label for="lname">ROll No:</label><br>
-  <input type="text" id="roll" name="roll"><br>
-  <label for="lname">Class:</label><br>
+    <section class="landingPage">
+        <h1>YourClassAssistant</h1>
+        <h3>Follow Through And Make Your Regular College Life Easier.</h3>
+        <ul>
+            <li>&#9658 Authenticate using valid Tag and Key to continue.</li>
+            <li>&#9658 Fill in the details properly, we won't be responsible for any mishappenings.</li>
+            <li>&#9658 The site is still under making so ignore any bugs or glitches.</li>
+            <li>&#9658 Do let us know your feedback to improve the page.</li>
+        </ul>
+        <div>
+            <p>Login</p>
+            <form>
+                <img src="profile.png" alt="">
+                <label for="username">Tag</label>
+                <input id="username" type="text" required>
+                <img src="key.png" alt="">
+                <label for="key">Access Key</label>
+                <input id="key" type="text" required>
+            </form>
+            <img class="proceed" onclick="Authenticate()" src="arrow.png" alt="proceed">
+        </div>
+    </section>
 
-  <input type="radio" id="se2" name="class" value="SE2">
-<label for="se2">SE2</label>
+    <header>
+        <nav>
+                <li><a href="index.html">home</a></li>
+                <li><a href="explore.html">explore</a></li>
+                <li><a href="more.html">more</a></li>
+        </nav>
+        <div class="live">
+            <p>Join the SE-II live lecture</p>
+            <img class="livetoggle" src="live.png" alt="Join Live Lecture">
+            <img onclick="liveToggle()" src="extend.png" alt="Extend Time-table" class="extend">
+            
+            <ul>
+                <label>Lecture Links</label>
+                <li><a href=" https://meet.google.com/zsz-jdkr-udz">Micro-Proccessor<br>(MP)</a></li>
+                <li><a href="https://meet.google.com/tfq-pimq-irh">Database Management System<br>(DBMS)</a></li>
+                <li><a href="http://meet.google.com/fzp-tnth-eck">Engineering Mathematics- IV<br>(EM)</a></li>
+                <li><a href="https://meet.google.com/ciu-pxkp-fgc">Operating System<br>(OS)</a></li>
+                <li><a href="https://meet.google.com/nea-iorv-uoy">Analysis Of Algorithm<br>(AOA)</a></li>
+            </ul>
+        </div>
+    </header>
 
-<input type="radio" id="maths" name="class" value="SE1">
-<label for="se1">SE1</label><br>
-  <label for="lname">Batch:</label><br>
-  <input type="text" id="batch" name="batch"><br>
-  <p> CHoose Your Assignment<p>
-  <input type="radio" id="dlca" name="type" value="dlca">
-  <label for="dlca">dlca</label><br>
-  <input type="radio" id="maths" name="type" value="maths">
-  <label for="Maths">maths</label><br>
-  <input type="radio" id="os" name="type" value="OS">
-  <label for="os">OS</label><br>
-  <input type="submit" value="Submit">
-</form> 
+    <main>
+        <section>
+            <form id="selection" action="http://localhost:5000/assignment" method="POST" enctype="multipart/form-data">
+
+                <label for="fname">First name</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="lname">ROll No</label><br>
+                <input type="text" id="roll" name="roll" required><br>
+                <label for="lname">Class</label><br>
+
+                <input type="radio" id="se2" name="class" value="SE2" required>
+                <label for="se2">SE2</label>
+
+                <input type="radio" id="maths" name="class" value="SE1" required>
+                <label for="se1">SE1</label><br>
+                <label for="lname">Batch</label><br>
+                <input id="label" type="text" id="batch" name="batch" required><br>
+
+                <p>CHoose Your Assignment
+                <p>
+
+                    <input type="radio" id="dlca" name="type" value="dlca" required>
+                    <label for="dlca">dlca</label><br>
+                    <input type="radio" id="maths" name="type" value="maths" required>
+                    <label for="Maths">maths</label><br>
+                    <input type="radio" id="os" name="type" value="OS" required>
+                    <label for="os">OS</label><br>
+                    <input id="btn" type="submit" value="Submit">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; reserved by team ACE coders</p>
+    </footer>
 </body>
-</html> 
+
+</html>
