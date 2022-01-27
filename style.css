@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+    --bg-anime: linear-gradient(
+        65deg, 
+        rgba(2,0,36,1), 
+        rgba(121,9,118,1), 
+        rgba(0,212,255,1)
+    );
+
+    --nav-gradient: linear-gradient(
+        45deg,
+        rgb(255, 255, 255), 
+        rgba(231, 204, 230, 0.555), 
+        rgba(157, 162, 163, 0.5)
+    );
+
+    --live-gradient: linear-gradient(
+        45deg,
+        rgba(157, 162, 163, 0.5),
+        rgba(231, 204, 230, 0.555), 
+        rgb(255, 255, 255)
+    );
+
+    --primary-color: #0B0C31;
+
+    --primary-font: #C5C6C7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+}
+
+body {
+    width: 100%;
+    background-image: var(--bg-anime);
+    background-size: 300%;
+    animation: subtle 10s infinite alternate;
+    transition: 1s;
+}
+
+/* --------------------------Landing Page------------------------- */
+
+.landingPage {
+    z-index: 1000;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: var(--bg-anime);
+    background-size: 300%;
+    animation: subtle 10s infinite alternate;
+    transition: 1s;
+}
+
+@keyframes subtle {
+    0% {
+        background-position: left;
+    } 100% {
+        background-position: right;
+    }
+}
+
+.landingPage:hover {
+    cursor: default;
+}
+
+.landingPage h1 {
+    color: rgba(0,0,0,0);
+    text-align: center;
+    font-weight: bold ;
+    font-family: 'Mochiy Pop P One', consolas, sans-serif;
+    letter-spacing: 4px;
+    padding-top: 8vh;
+    font-size: 200%;
+    font-style: italic;
+    background-image: var(--nav-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400%;
+    background-position: left;
+    animation: motion 6s infinite alternate;
+}
+
+@keyframes motion {
+    0% {
+        background-position: left;
+    }100% {
+        background-position: right;
+    }
+}
+
+.landingPage h3 {
+    font-size: 2.8vh;
+    letter-spacing: 2px;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+}
+
+.landingPage ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1vh 0;
+    letter-spacing: 1px;
+}
+
+.landingPage ul li:nth-child(1) {
+    opacity: 0;
+    margin-left: 50%;
+    animation: slide 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.landingPage ul li:nth-child(2) {
+    opacity: 0;
+    margin-left: 50%;
+    animation: slide 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.landingPage ul li:nth-child(3) {
+    opacity: 0;
+    margin-left: 50%;
+    animation: slide 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.landingPage ul li:nth-child(4) {
+    opacity: 0;
+    margin-left: 50%;
+    animation: slide 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+
+    } 90% {
+        opacity: 10;
+    } 
+    100% {
+        opacity: 100;
+        margin: 0 auto;
+    }
+}
+
+.landingPage div {
+    padding: 2vh;
+    margin: 4vh auto;
+    border-radius: 0.5rem;
+    background: rgba(0,0,0,0.2);
+    height: 45vh;
+    width: 65vh;
+}
+
+.landingPage div p {
+    text-align: center;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.landingPage input {
+    margin: 3vh 4vh;
+    height: 6vh;
+    width: 55vh;
+    display: flex;
+    justify-content: center;
+}
+
+div form label {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.landingPage div form img {
+    display: inline;
+    transform: translateY(2px);
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
+.landingPage div img {
+    margin-top: 1vh;
+    height: 4vh;
+    width: 8vh;
+    transition: 1s;
+}
+
+.proceed:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+    height: 5vh;
+    width: 12vh;
+    box-shadow: white;
+}
+
+/* ------------------------Nav & Live Panel------------------------- */
+
+nav {
+    overflow: hidden;
+    opacity: 80%;
+    transform: none;
+    height: 17.5vh;
+    width: 75%;
+    display: flex;
+    background-image: var(--nav-gradient);
+    background-size: 120%;
+    background-position: right;
+    -webkit-clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 0);
+    transition: 1s;
+}
+
+nav:hover {
+    background-position: left;
+}
+
+.live {
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 80%;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 17.5vh;
+    width: calc(25% + 0.5px);
+    background-image: var(--live-gradient);
+    background-size: 150%;
+    background-position: left;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 50%, 0 0);
+    transition: 1s;
+}
+
+.live:hover {
+    background-position: right;
+}
+
+.live p {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.livetoggle {
+    position: absolute;
+    margin: 1vh auto;
+    animation: beat 2s infinite alternate;
+    transition: 1s;
+}
+
+.livetoggle:hover {
+    transform: rotateZ(360deg);
+    cursor: pointer;
+}
+
+@keyframes beat {
+    0%{
+        height: 5vh;
+        width: 5vh;
+    } 100% {
+        height: 6vh;
+        width: 6vh;
+    }
+}
+
+.extend {
+    position: absolute;
+    border-radius: 50%;
+    left: 1rem;
+    top: 2rem;
+    height: 5vh;
+    width: 5vh;
+    transition: 0.25s;
+}
+
+.extend:hover {
+    transform: rotateX(-180deg);
+    cursor: pointer;
+}
+
+nav ul {
+    position: absolute;
+    margin: 10vh 0 0 4vh;
+    padding: 8vh 0 0 0;
+}
+
+nav ul label {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Mochiy Pop P One', consolas, sans-serif;
+    letter-spacing: 3px;
+}
+
+nav ul li {
+    list-style: disc;
+    padding: 1.2rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    transition: 0.45s;
+}
+
+nav ul li a:hover {
+    color: whitesmoke;
+}
+/* -------------------------------Main--------------------------- */
+
+main {
+    opacity: 100;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+/* ----------------------Form------------------- */
+
+#selection {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.2);
+    height: 55vh;
+    width: 40vh;
+    padding: 5vh;
+    border-radius: 1.4rem;
+    transition: 1s;
+    transform: none;
+}
+
+#selection input {
+    margin: 1.5vh 0;
+    border-radius: 1.2rem;
+    border: none;
+}
+
+#name, #roll, #label {
+    height: 3.2vh;
+    width: 35vh;
+}
+
+#selection label, #selection p {
+    letter-spacing: 3px;
+    transform: translateY(-3px);
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--primary-font);
+}
+
+p:hover {
+    cursor: default;
+}
+
+#btn {
+    height: 5vh;
+    width: 15vh;
+    font-size: 110%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(1.5vh) translateX(11vh);
+    transition: 0.5s;
+}
+
+#btn:hover {
+    border: none;
+    transform: translateY(0) translateX(11vh);
+    background-color: rgb(90, 255, 90);
+    box-shadow: 0 0 30px rgb(90, 255, 90), 0 0 60px rgb(90, 255, 90), 0 0 90px rgb(90, 255, 90);
+}
+
+/* -----------------------------Footer----------------------- */
+
+footer {
+    margin-top: 2.5vh;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    opacity: 100;
+    transition: 1s;
+    transform: none;
+}
+
+footer:hover {
+    cursor: default;
+}
+
+/* ------------------------------JS--------------------------------- */
+
+header, main, footer {
+    display: none;
+    transition: 1s;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* ----------------------------Media-Queries--------------------- */
+
+@media(max-width: 1024px){
+    .live p {
+        display: none;
+    }
+
+    .livetoggle {
+        margin: 4vh 0;
+        height: 8vh;
+        width: 8vh;
+    }
+
+    #btn {
+        transform: translateY(-1vh) translateX(70%);
+    }
+
+    nav li {
+        margin-left: 10vw;
+    }
+}
+
+@media(max-width: 786px){
+
+    .landingPage h1 {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+    .landingPage div {
+        padding: 2vh;
+        margin: 4vh auto;
+        height: 35vh;
+        width: 65vw;
+    }
+
+    .landingPage h3 {
+        font-size: 2.4vh;
+    }
+
+    .landingPage input {
+        width: 85%;
+        height: 4vh;
+        margin: 1vh auto;
+    }
+
+    .landingPage div img {
+        height: 4vh;
+        width: 10vw;
+    }
+
+    nav {
+        height: 17.5vh;
+        width: 75%;
+    }
+
+    .live {
+        height: 17.5vh;
+        width: 25%;
+    }
+    
+    .live p {
+        display: none;
+    }
+
+
+    .livetoggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15%;
+        margin: 2vh 0 0 4vh;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 10vh 0 2vh 0;
+        padding: 8vh 1vh;
+    }
+
+    #selection {
+        margin: 10vh 0 0 0;
+        width: 70%;
+        height: 60vh;
+    }
+
+    #name, #roll, #label {
+        width: 95%;
+    }
+
+    #btn {
+        transform: translateY(1vh) translateX(40%);
+    }
+
+    footer {
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        max-height: 100vh;
+        font-size: 98%;
+    }
+
+    .landingPage h1 {
+        font-size: 2.1vh;
+    }
+
+    .landingPage ul li {
+        font-size: 1rem;
+    }
+
+    .landingPage div {
+        width: 70%;
+        height: 45vh;
+    }
+
+    div p {
+        font-size: 80%;
+    }
+    
+    .access input {
+        height: 2.4vh;
+    }
+
+    .livetoggle {
+        margin: 2vh 0 0 2vh;
+    }
+
+    .landingPage div {
+        padding: 2vh;
+        margin: 6vh auto;
+        height: 28vh;
+        width: 65vw;
+    }
+
+    .landingPage form image {
+        height: 2.5vh;
+        width: 2.5vh;
+    }
+
+    .landingPage div img {
+        height: 5vh;
+    }
+
+    main {
+        height: 71vh;
+    }
+
+    #selection {
+        width: 60%;
+        height: 55vh;
+        margin-top: 10vh;
+    }
+
+    #name, #roll, #label {
+        width: 90%;
+    }
+
+    #btn {
+        transform: translateY(0.4vh) translateX(30%);
+    }
+
+    footer {
+        height: 7vh;
+        font-size: 1rem;
+        margin: 7vh 0 0 0;
+        padding: none;
+    }
+}
